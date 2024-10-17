@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Arte" ALTER COLUMN "updatedAt" DROP NOT NULL,
+ALTER COLUMN "updatedAt" DROP DEFAULT;

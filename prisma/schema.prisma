@@ -12,3 +12,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Arte {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  description String
+  autor     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
