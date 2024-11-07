@@ -5,7 +5,7 @@ export class CreateAbstractArtDto {
     name: string;
 
     @ApiProperty({required: false})
-    description?: string;
+    description: string;
 
     @ApiProperty()
     autor: string;

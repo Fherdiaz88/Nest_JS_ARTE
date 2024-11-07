@@ -6,12 +6,16 @@ import { PrismaService } from 'src/prisma/prisma.service';
 @Injectable()
 export class AbstractArtService {
   constructor(private prisma: PrismaService) {}
+  
   create(createAbstractArtDto: CreateAbstractArtDto) {
-    return 'This action adds a new abstractArt';
+    return this.prisma.arte.create ({
+      data: createAbstractArtDto,
+    });
   }
 
   findAll() {
-    return `This action returns all abstractArt`;
+    return this.prisma.arte.findMany({
+    });
   }
 
   findOne(id: number) {
